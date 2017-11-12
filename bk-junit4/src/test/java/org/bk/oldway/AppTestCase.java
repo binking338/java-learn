@@ -6,17 +6,10 @@ import junit.framework.TestSuite;
 
 public class AppTestCase
         extends TestCase {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTestCase(String testName) {
-        super(testName);
-    }
 
     /**
-     * @return the suite of tests being tested
+     * 如果包含静态suite方法将会被当作TestSuit
+     * @return
      */
     public static Test suite() {
         return new TestSuite(AppTestCase.class);
@@ -39,7 +32,11 @@ public class AppTestCase
     }
 
     /**
-     * Rigourous Test :-)
+     * test方法命名规则:
+     * 1）.访问权限都是public；
+     * 2）.返回类型都是void;
+     * 3）.没有参数；
+     * 4）.方法名以“test”开头。
      */
     public void testApp() {
         assertTrue(true);
